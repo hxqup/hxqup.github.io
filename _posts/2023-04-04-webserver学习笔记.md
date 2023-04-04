@@ -57,12 +57,22 @@ tags:
 3. 修改布尔表达式通常要用mutex保护
 4. 注意区分signal与broadcast:"broadcast通常用于表明状态变化，signal通常用于表示资源可用“
 
-> notify_all与notify
->
-> 使用notify_all可能更安全，但可能带来明显的效率下降，因为容易造成惊群现象。notify则在某些情况下导致并发不充分。
-
 >* pthread_cond_init函数用于初始化条件变量
 >* pthread_cond_destroy函数销毁条件变量
 >* pthread_cond_broadcast函数以广播的方式唤醒**所有**等待条件变量的线程
 >
 >* pthread_cond_wait函数用于等待目标条件变量。该函数使用时需要传入mutex参数(加锁的互斥锁),函数执行时，先把调用线程放入条件变量的请求队列，然后把互斥锁mutex解锁，当函数成功返回为0时，互斥锁会再次锁上，也就是说函数内部有一次解锁和解锁的操作。
+>* pthread_cond_signal只唤醒一个等待的线程，不保证唤醒等待线程中的哪一个线程
+>* pthread_cond_timedwait设置了一个超时时间，如果超出了超时时间，那么该函数会退出，并返回errno，避免因为死锁等原因造成线程长时间等待
+
+---
+
+> **notify_all与notify**
+
+> 使用notify_all可能更安全，但可能带来明显的效率下降，因为容易造成惊群现象。notify则在某些情况下导致并发不充分。
+
+参考资料：
+
+陈硕 《Linux多线程服务端编程》
+
+游双 《Linux高性能网络服务器编程》
