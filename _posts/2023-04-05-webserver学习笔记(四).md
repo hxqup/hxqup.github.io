@@ -15,7 +15,7 @@ tags:
 
 > * 请求报文：
 >
->   ```html
+>   ```http
 >   GET /index.html HTTP/1.1
 >   Host: www.example.com
 >   Connection: keep-alive
@@ -26,7 +26,7 @@ tags:
 >   Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7
 >   ```
 >
->   ```html
+>   ```http
 >    POST / HTTP1.1
 >    Host:www.wrox.com
 >    User-Agent:Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727; .NET CLR 3.0.04506.648; .NET CLR 3.5.21022)
@@ -39,7 +39,7 @@ tags:
 >
 > * 响应报文
 >
->   ```html
+>   ```http
 >   HTTP/1.1 200 OK
 >   Date: Mon, 05 Apr 2023 00:00:00 GMT
 >   Server: Apache/2.4.6 (CentOS)
@@ -166,7 +166,7 @@ void Http_conn::parse(){
 
 主要代码如下：
 
-```c++
+```C++
 void Http_conn::send(){
 	string outbuffer="";
 	if(METHOD_POST==method){
@@ -244,7 +244,7 @@ void Http_conn::send(){
 
 2.发送给客户端
 
-> ```c++
+> ```C++
 > ssize_t writen(int fd,const void *vptr,size_t n){
 > 	size_t nleft;
 > 	ssize_t nwritten;
