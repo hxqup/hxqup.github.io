@@ -1,6 +1,6 @@
 # Site settings
 title: 普通 Blog
-SEOTitle: 普通博客 | Ordinary Blog
+SEOTitle: 普通博客 | 进化成更好的人
 header-img: img/home-bg.jpg
 email: hxq_378@163.com
 description: "这里是 @hxqup 的个人博客，与你一起发现更大的世界 | 要做一个有 swag 的程序员"
@@ -59,7 +59,7 @@ kramdown:
       start_line: 1
 
 # Disqus settings
-disqus_username: hux
+disqus_username: hxq
 
 # Netease settings
 netease_comment: false
@@ -68,9 +68,9 @@ netease_comment: false
 # Baidu Analytics
 # ba_track_id: [your track id]
 
-# Google Analytics
-ga_track_id: "UA-49627206-1" # Format: UA-xxxxxx-xx
-ga_domain: huangxuan.me
+# # Google Analytics
+# ga_track_id: "UA-49627206-1" # Format: UA-xxxxxx-xx
+# ga_domain: huangxuan.me
 
 # Sidebar settings
 sidebar: true # whether or not using Sidebar.
