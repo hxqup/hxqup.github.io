@@ -141,7 +141,7 @@ public:
 >
 > * setbuffer
 >
-> ```c++
+> ```C++
 > void setbuffer(FILE * stream,char * buf,size_t size);
 > ```
 >
@@ -149,7 +149,7 @@ public:
 >
 > * fwrite_unlocked函数，相当于fwrite的无锁版本，效率更高
 >
-> ```c++
+> ```C++
 > size_t fwrite_unlocked(const void *ptr, size_t size, size_t count, FILE *stream);
 > ```
 >
