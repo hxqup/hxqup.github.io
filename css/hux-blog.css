@@ -372,14 +372,22 @@ pre code {
   }
 }
 .intro-header {
-  background: no-repeat center center;
+  /* background: no-repeat center center;
   background-color: #808080;
   background-attachment: scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
-  margin-bottom: 0px;
+  margin-bottom: 0px; */
+  background-size: cover; /* 添加这一行，将背景图片铺满整个元素 */
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  color: #fff;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
   /* 0 on mobile, modify by Hux */
 }
 @media only screen and (min-width: 768px) {
